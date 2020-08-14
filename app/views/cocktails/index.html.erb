@@ -1,18 +1,23 @@
 <div class="container index-cocktail">
 
   <div class="d-flex flex-wrap">
+
     <% @cocktails.each do |cocktail| %>
+
       <div class="card cocktail-card">
+
         <div class="card-body text-center">
-        <%= cl_image_tag cokctail.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag cocktail.photo.key, height: 150, width: 150, crop: :fill %>
           <p><%= cocktail.name %></p>
           <div class="btn btn-primary link-show">
             <%= link_to "See details !", cocktail_path(cocktail.id) %>
           </div>
       </div>
+
       </div>
     <% end %>
   </div>
+
   <div class="btn btn-success link-show btn-add mb-5">
     <%= link_to "Add cocktail", new_cocktail_path %>
   </div>
