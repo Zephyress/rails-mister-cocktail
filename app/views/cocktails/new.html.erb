@@ -3,6 +3,7 @@
     <%= simple_form_for (@cocktail) do |f| %>
       <div class="form-group mt-5">
         <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
       </div>
       <%= f.submit "New cocktail", class: "btn btn-primary" %>
     <% end %>
